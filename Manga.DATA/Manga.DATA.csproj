@@ -56,12 +56,59 @@
     <Compile Include="DAL\BookForCreation.cs" />
     <Compile Include="DAL\MangaDbContext.cs" />
     <Compile Include="Dto\BookForDisplay.cs" />
-    <Compile Include="Entities\Book.cs" />
-    <Compile Include="Entities\Chapter.cs" />
-    <Compile Include="Entities\Page.cs" />
+    <Compile Include="Dto\DataForCreateGrade.cs" />
+    <Compile Include="Dto\GenderDTO.cs" />
+    <Compile Include="Dto\GradeDTO.cs" />
+    <Compile Include="Dto\GradesDTO.cs" />
+    <Compile Include="Dto\GradesNameDTO.cs" />
+    <Compile Include="Dto\ProvinceDTO.cs" />
+    <Compile Include="Dto\SaveGradeDTO.cs" />
+    <Compile Include="Dto\StudentDTO.cs" />
+    <Compile Include="Dto\RemoveIdDTO.cs" />
+    <Compile Include="Dto\SubjectDTO.cs" />
+    <Compile Include="Dto\TeacherDTO.cs" />
+    <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\Grade.cs" />
+    <Compile Include="Entities\Grades.cs" />
+    <Compile Include="Entities\Linq_Subject_Teacher.cs" />
+    <Compile Include="Entities\Province.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Subject.cs" />
+    <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Mappings\StudentMap.cs" />
+    <Compile Include="Mappings\UserMap.cs" />
     <Compile Include="Migrations\201806041831204_initial commit.cs" />
     <Compile Include="Migrations\201806041831204_initial commit.Designer.cs">
       <DependentUpon>201806041831204_initial commit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806052016471_add student, grade, grades, teachers, subjects, provinces, genders table, and delete book, chapters, pages.cs" />
+    <Compile Include="Migrations\201806052016471_add student, grade, grades, teachers, subjects, provinces, genders table, and delete book, chapters, pages.Designer.cs">
+      <DependentUpon>201806052016471_add student, grade, grades, teachers, subjects, provinces, genders table, and delete book, chapters, pages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806092326072_create table User.cs" />
+    <Compile Include="Migrations\201806092326072_create table User.Designer.cs">
+      <DependentUpon>201806092326072_create table User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806101002452_change relationship user - student,teacher.cs" />
+    <Compile Include="Migrations\201806101002452_change relationship user - student,teacher.Designer.cs">
+      <DependentUpon>201806101002452_change relationship user - student,teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806101254129_add reference to table users.cs" />
+    <Compile Include="Migrations\201806101254129_add reference to table users.Designer.cs">
+      <DependentUpon>201806101254129_add reference to table users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806101530244_add relation ship many to many teacher subject.cs" />
+    <Compile Include="Migrations\201806101530244_add relation ship many to many teacher subject.Designer.cs">
+      <DependentUpon>201806101530244_add relation ship many to many teacher subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806112042124_change relationship between subject and student, map them to new class linq_SubjecT_Teacher.cs" />
+    <Compile Include="Migrations\201806112042124_change relationship between subject and student, map them to new class linq_SubjecT_Teacher.Designer.cs">
+      <DependentUpon>201806112042124_change relationship between subject and student, map them to new class linq_SubjecT_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806122107550_add teacherid to table grades.cs" />
+    <Compile Include="Migrations\201806122107550_add teacherid to table grades.Designer.cs">
+      <DependentUpon>201806122107550_add teacherid to table grades.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +116,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806041831204_initial commit.resx">
       <DependentUpon>201806041831204_initial commit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806052016471_add student, grade, grades, teachers, subjects, provinces, genders table, and delete book, chapters, pages.resx">
+      <DependentUpon>201806052016471_add student, grade, grades, teachers, subjects, provinces, genders table, and delete book, chapters, pages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806092326072_create table User.resx">
+      <DependentUpon>201806092326072_create table User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806101002452_change relationship user - student,teacher.resx">
+      <DependentUpon>201806101002452_change relationship user - student,teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806101254129_add reference to table users.resx">
+      <DependentUpon>201806101254129_add reference to table users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806101530244_add relation ship many to many teacher subject.resx">
+      <DependentUpon>201806101530244_add relation ship many to many teacher subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806112042124_change relationship between subject and student, map them to new class linq_SubjecT_Teacher.resx">
+      <DependentUpon>201806112042124_change relationship between subject and student, map them to new class linq_SubjecT_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806122107550_add teacherid to table grades.resx">
+      <DependentUpon>201806122107550_add teacherid to table grades.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace Manga.DATA.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Manga.DATA.DAL.MangaDbContext context)

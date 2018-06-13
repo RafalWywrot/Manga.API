@@ -68,8 +68,13 @@ namespace Manga.API.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind<DbContext>().ToSelf().InRequestScope();
+            kernel.Bind<DbContext>().ToSelf().InRequestScope();
             kernel.Bind<IBookService>().To<BookService>();
+            kernel.Bind<IStudentService>().To<StudentService>();
+            kernel.Bind<ITeacherService>().To<TeacherService>();
+            kernel.Bind<IUserService>().To<UserService>(); 
+            kernel.Bind<ISubjectService>().To<SubjectService>();
+            kernel.Bind<IGradeService>().To<GradeService>();
         }
     }
 }

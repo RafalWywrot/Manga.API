@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -20,32 +23,38 @@ namespace Manga.API.Controllers
         {
             bookService = BookService;
         }
-        [HttpGet]
-        public IHttpActionResult Add()
-        {
-            Image img = Image.FromFile("D:\\Projects\\Manga\\Manga.API\\Manga.API\\images\\BlackCover\\Chapter1\\01.png");
-            MemoryStream ms = new MemoryStream();
-            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            bookService.AddBook(ms.ToArray());
-            return Ok(); 
-        }
-        [HttpGet]
-        public async Task<IHttpActionResult> Get(Guid bookId)
-        {
-            var bookForDisplay = await bookService.GetBookAsync(bookId);
-            if (bookForDisplay == null)
-            {
-                return BadRequest();
-            }
-            return Ok(bookForDisplay);
-        }
+        //[HttpGet]
+        //public IHttpActionResult Add()
+        //{
+        //    Image img = Image.FromFile("D:\\Projects\\Manga\\Manga.API\\Manga.API\\images\\BlackCover\\Chapter1\\01.png");
+        //    MemoryStream ms = new MemoryStream();
+        //    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+        //    bookService.AddBook(ms.ToArray());
+        //    return Ok(); 
+        //}
+        //[HttpGet]
+        //public async Task<IHttpActionResult> Get(Guid bookId)
+        //{
+        //    var bookForDisplay = await bookService.GetBookAsync(bookId);
+        //    if (bookForDisplay == null)
+        //    {
+        //        return BadRequest();
+        //    }
+        //    return Ok(bookForDisplay);
+        //}
 
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-            var books = bookService.GetBooksAsync();
-            return Ok(books);
-        }
+        //[HttpGet]
+        //public IHttpActionResult Get()
+        //{
+        //    var books = bookService.GetBooksAsync();
+        //    return Ok(books);
+        //}
+        //[HttpGet]
+        //public HttpResponseMessage GetImage()
+        //{
+        //    var book = bookService.GetBookImage();
+        //    return Request.CreateResponse(HttpStatusCode.OK, book);
+        //}
 
         //[HttpPost]
         //public async Task<IHttpActionResult> Post([FromBody] BookForCreation bookForCreation)

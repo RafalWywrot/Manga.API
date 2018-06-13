@@ -1,5 +1,6 @@
 ﻿using Manga.DATA.DAL;
 using Manga.DATA.Dto;
+using Manga.DATA.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,11 @@ namespace Manga.SERVICES.Services.Interfaces
 {
     public interface IBookService
     {
-        Task<BookForDisplay> GetBookAsync(Guid bookId);
-        //Task<IList<BookForDisplay>> GetBooksAsync();
-        IList<BookForDisplay> GetBooksAsync();
-        Task<BookForDisplay> AddBookAsync(BookForCreation bookForCreation);
-        void AddBook(byte[] image);
+        //Task<BookForDisplay> GetBookAsync(Guid bookId);
+        ////Task<IList<BookForDisplay>> GetBooksAsync();
+        //IList<BookForDisplay> GetBooksAsync();
+        //Task<BookForDisplay> AddBookAsync(BookForCreation bookForCreation);
+        //void AddBook(byte[] image);
+        //Page GetBookImage();
     }
 }
